@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jfxtableviewimage.FXMLDocumentController">
+    <children>
+      <TableView fx:id="tableview" layoutX="254.0" layoutY="159.0" prefHeight="302.0" prefWidth="657.0">
+        <columns>
+         
+          <TableColumn fx:id="codigo" prefWidth="85.0" text="ID" />
+          <TableColumn fx:id="nombre" prefWidth="157.0" text="Marca" />
+            <TableColumn fx:id="precio" prefWidth="155.0" text="Precio" />
+            <TableColumn fx:id="descripcion" prefWidth="114.0" text="Descripcion" />
+            <TableColumn fx:id="imagen" prefWidth="141.0" text="Foto" />
+        </columns>
+      </TableView>
+      <Button layoutX="284.0" layoutY="55.0" mnemonicParsing="false" onAction="#selectAll" text="Mostrar todo" />
+      <Button layoutX="603.0" layoutY="55.0" mnemonicParsing="false" onAction="#update" text="Actualizar" />
+      <Button layoutX="714.0" layoutY="55.0" mnemonicParsing="false" onAction="#delete" text="Eliminar" />
+      <TextField fx:id="precios" layoutX="17.0" layoutY="211.0" promptText="Precio" />
+      <TextField fx:id="descripcions" layoutX="16.0" layoutY="266.0" prefHeight="89.0" prefWidth="150.0" promptText="Descripcion" />
+      <TextField fx:id="nombres" layoutX="17.0" layoutY="143.0" promptText="Nombre" />
+      <TextField fx:id="codigos" layoutX="17.0" layoutY="55.0" promptText="Código" />
+      <Button layoutX="461.0" layoutY="55.0" mnemonicParsing="false" onAction="#insert" text="Agregar" />
+    </children>
+</AnchorPane>
