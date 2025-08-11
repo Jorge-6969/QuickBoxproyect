@@ -29,6 +29,6 @@
       <TextField fx:id="codigos" layoutX="17.0" layoutY="55.0" promptText="Código" />
       <Button layoutX="461.0" layoutY="55.0" mnemonicParsing="false" onAction="#insert" text="Agregar" />
       <DatePicker fx:id="fecha" layoutX="736.0" layoutY="487.0" />
-      <Label fx:id="usuarioSesion" layoutX="736.0" layoutY="528.0" prefHeight="26.0" prefWidth="175.0" text="Label" />
+      <Label fx:id="usuarioSesion" layoutX="736.0" layoutY="528.0" prefHeight="26.0" prefWidth="175.0" />
     </children>
 </AnchorPane>

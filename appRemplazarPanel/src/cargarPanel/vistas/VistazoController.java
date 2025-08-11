@@ -141,7 +141,9 @@ public class VistazoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {       
         accedeDb = new Conectadb();
-           fecha.setValue(LocalDate.now());
+        fecha.setValue(LocalDate.now());
+        usuario = Validar.getInstance();
+        usuarioSesion.setText(usuario.getUsuario());
         codigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
         nombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         precio.setCellValueFactory(new PropertyValueFactory<>("precio"));
