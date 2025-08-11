@@ -3,6 +3,7 @@ package cargarPanel.vistas;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.Optional;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -14,6 +15,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -24,6 +27,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javax.swing.JOptionPane;
 import recursos.Conectadb;
+import recursos.Validar;
 
 
 public class VistazoController implements Initializable {
@@ -39,13 +43,19 @@ public class VistazoController implements Initializable {
     private TextField precios;
     @FXML
     private TextField descripcions;
+    @FXML
+    private DatePicker fecha;
+    @FXML
+    private Label usuarioSesion;
+    
+    private Validar usuario;
     
     @FXML private TableView<Vehiculos> tableview;
     @FXML private TableColumn<Vehiculos, String> codigo;
     @FXML private TableColumn<Vehiculos, String> nombre;
     @FXML private TableColumn<Vehiculos, String> precio;
     @FXML private TableColumn<Vehiculos, String> descripcion;
-    @FXML private TableColumn<Vehiculos, String> imagen;
+    @FXML private TableColumn<Vehiculos, String> foto;
 
    
     private final ObservableList<Vehiculos> data = FXCollections.observableArrayList();
@@ -69,8 +79,8 @@ public class VistazoController implements Initializable {
                 res.getString("codigo"),
                 res.getString("nombre"),
                 res.getString("precio"),
-                res.getString("descripcion")               
-                                       
+                res.getString("descripcion"),
+                res.getString("foto")                     
                 );
                 ObservableList<Vehiculos> elementos = tableview.getItems();
                 elementos.add(aMostrar);
@@ -84,10 +94,8 @@ public class VistazoController implements Initializable {
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null, "setActioner: \n " + ex.toString());
             Logger.getLogger(VistazoController.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-    
-    }
+        } 
+    }        
         
     @FXML
     private void update(ActionEvent event){
@@ -113,7 +121,8 @@ public class VistazoController implements Initializable {
             System.out.println(consulta);
             accedeDb.setDato(consulta);
         }
-      
+        tableview.getItems().clear();
+      ShowAll();
 
         
     } 
@@ -132,24 +141,24 @@ public class VistazoController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {       
         accedeDb = new Conectadb();
-        
+           fecha.setValue(LocalDate.now());
         codigo.setCellValueFactory(new PropertyValueFactory<>("codigo"));
         nombre.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         precio.setCellValueFactory(new PropertyValueFactory<>("precio"));
         descripcion.setCellValueFactory(new PropertyValueFactory<>("descripcion"));
-        imagen.setPrefWidth(80); 
-        imagen.setCellValueFactory(new PropertyValueFactory<>("imagen"));
+        foto.setPrefWidth(80); 
+        foto.setCellValueFactory(new PropertyValueFactory<>("foto"));
 
-        ImageView imagen1 = new ImageView(new Image(this.getClass().getResourceAsStream("imagenes/cAzul.png")));
+        /*ImageView imagen1 = new ImageView(new Image(this.getClass().getResourceAsStream("imagenes/cAzul.png")));
         ImageView imagen2 = new ImageView(new Image(this.getClass().getResourceAsStream("imagenes/cVerde.png")));
-        ImageView imagen3 = new ImageView(new Image(this.getClass().getResourceAsStream("imagenes/cNaranja.png")));
+        ImageView imagen3 = new ImageView(new Image(this.getClass().getResourceAsStream("imagenes/cNaranja.png")));*/
         
         
         codigo.setCellValueFactory(new PropertyValueFactory<Vehiculos, String>("codigo"));      
         nombre.setCellValueFactory(new PropertyValueFactory<Vehiculos, String>("nombre"));
         precio.setCellValueFactory(new PropertyValueFactory<Vehiculos, String>("precio"));
         descripcion.setCellValueFactory(new PropertyValueFactory<Vehiculos, String>("descripcion"));
-        imagen.setCellValueFactory(new PropertyValueFactory<Vehiculos, String>("imagen"));
+        foto.setCellValueFactory(new PropertyValueFactory<Vehiculos, String>("foto"));
         
         
       tableview.getSelectionModel().setSelectionMode(javafx.scene.control.SelectionMode.SINGLE);
@@ -179,7 +188,8 @@ public class VistazoController implements Initializable {
                 codigo.getId(),
                 nombre.getText(),
                 precio.getText(),
-                descripcion.getText()
+                descripcion.getText(),
+                foto.getText()
                 );
                 
                 

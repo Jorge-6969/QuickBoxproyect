@@ -127,8 +127,8 @@ public class LoginController implements Initializable {
          }
             
             
-        }catch(IOException e){e.printStackTrace();
-}
+        }catch(IOException e){
+        }
         
     }
     

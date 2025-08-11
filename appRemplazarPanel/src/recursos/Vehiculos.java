@@ -13,12 +13,14 @@ public class Vehiculos {
     private final StringProperty precio;
     private final StringProperty descripcion;
     private ImageView imagen;
+     private final StringProperty foto;
 
- public Vehiculos(String codigo, String nombre, String precio, String descripcion) {
+ public Vehiculos(String codigo, String nombre, String precio, String descripcion, String foto) {
         this.codigo = new SimpleStringProperty(codigo);
         this.nombre = new SimpleStringProperty(nombre);
         this.precio = new SimpleStringProperty(precio);
         this.descripcion = new SimpleStringProperty(descripcion);
+        this.foto = new SimpleStringProperty(foto);
 
       
     }
@@ -61,11 +63,11 @@ public class Vehiculos {
         this.precio.set(pre);
     }
     
-    public ImageView getImagen() {
-        return imagen;
+    public String getFoto() {
+        return foto.get();
     }
 
-    public void setImagen(ImageView img) {
-        this.imagen = img;
+    public void setFoto(String img) {
+        this.foto.set(img);
     }
 }
