@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -16,7 +17,7 @@
           <TableColumn fx:id="nombre" prefWidth="157.0" text="Marca" />
             <TableColumn fx:id="precio" prefWidth="155.0" text="Precio" />
             <TableColumn fx:id="descripcion" prefWidth="114.0" text="Descripcion" />
-            <TableColumn fx:id="imagen" prefWidth="141.0" text="Foto" />
+            <TableColumn fx:id="foto" prefWidth="141.0" text="Foto" />
         </columns>
       </TableView>
       <Button layoutX="284.0" layoutY="55.0" mnemonicParsing="false" onAction="#selectAll" text="Mostrar todo" />
@@ -28,5 +29,6 @@
       <TextField fx:id="codigos" layoutX="17.0" layoutY="55.0" promptText="Código" />
       <Button layoutX="461.0" layoutY="55.0" mnemonicParsing="false" onAction="#insert" text="Agregar" />
       <DatePicker fx:id="fecha" layoutX="736.0" layoutY="487.0" />
+      <Label fx:id="usuarioSesion" layoutX="736.0" layoutY="528.0" prefHeight="26.0" prefWidth="175.0" text="Label" />
     </children>
 </AnchorPane>
