@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="appRemplazarPanel.jar" size="1491243" download="eager" />
+    <jar href="appRemplazarPanel.jar" size="1496812" download="eager" />
     <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
     <jar href="lib\mysql-connector-java-8.0.17.jar" size="2321813" download="eager" />
   </resources>

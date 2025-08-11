@@ -27,7 +27,7 @@
             <Separator prefWidth="200.0" />
             <Separator layoutX="10.0" layoutY="76.0" prefWidth="200.0" />
             <!--JFXButton alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#pagina2" prefHeight="33.0" prefWidth="163.0" style="-fx-border-color: black;" text="Ficha de identificación"-->
-            <Button alignment="CENTER" contentDisplay="CENTER" onAction="#usuario" prefHeight="95.0" prefWidth="165.0" style="-fx-background-color: white;" text="Usuario">
+            <Button alignment="CENTER" contentDisplay="CENTER" onAction="#Usuario" prefHeight="95.0" prefWidth="165.0" style="-fx-background-color: white;" text="Usuario">
                <opaqueInsets>
                   <Insets bottom="2.0" />
                </opaqueInsets>
