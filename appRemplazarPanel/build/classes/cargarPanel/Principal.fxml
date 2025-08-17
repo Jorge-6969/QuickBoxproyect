@@ -12,7 +12,7 @@
 
 <BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="809.0" prefWidth="1355.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cargarPanel.PrincipalController">
    <left>
-      <VBox prefHeight="693.0" prefWidth="170.0" style="-fx-background-color: cyan;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="693.0" prefWidth="170.0" style="-fx-background-color: #4169E1;" BorderPane.alignment="CENTER">
          <children>
             <Button layoutX="10.0" layoutY="76.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="158.0" style="-fx-background-color: transparent;">
                <font>
@@ -20,14 +20,14 @@
                </font>
             </Button>
             <Separator prefWidth="200.0" />
-            <Button mnemonicParsing="false" onAction="#cerrar" prefHeight="25.0" prefWidth="173.0" text="Cerrar">
+            <Button mnemonicParsing="false" onAction="#cerrar" prefHeight="25.0" prefWidth="173.0" style="-fx-cursor: hand;" text="Cerrar">
                <font>
                   <Font name="Bodoni MT" size="19.0" />
                </font></Button>
             <Separator prefWidth="200.0" />
             <Separator layoutX="10.0" layoutY="76.0" prefWidth="200.0" />
             <!--JFXButton alignment="CENTER" contentDisplay="CENTER" onMouseClicked="#pagina2" prefHeight="33.0" prefWidth="163.0" style="-fx-border-color: black;" text="Ficha de identificación"-->
-            <Button alignment="CENTER" contentDisplay="CENTER" onAction="#Usuario" prefHeight="95.0" prefWidth="165.0" style="-fx-background-color: white;" text="Usuario">
+            <Button alignment="CENTER" contentDisplay="CENTER" onAction="#Usuario" prefHeight="95.0" prefWidth="165.0" style="-fx-background-color: white; -fx-cursor: hand;" text="Usuario">
                <opaqueInsets>
                   <Insets bottom="2.0" />
                </opaqueInsets>
@@ -35,7 +35,7 @@
                   <Font name="Bodoni MT" size="19.0" />
                </font>
             </Button>
-            <Separator prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: cyan;" />
+            <Separator prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: #4169E1;" />
             <Button fx:id="equipo" alignment="CENTER" contentDisplay="CENTER" onAction="#Venta" opacity="0.98" prefHeight="91.0" prefWidth="163.0" style="-fx-background-color: white; -fx-cursor: hand;" text="Venta">
                <opaqueInsets>
                   <Insets bottom="2.0" />
@@ -44,8 +44,8 @@
                   <Font name="Bodoni MT" size="19.0" />
                </font>
             </Button>
-            <Separator layoutX="10.0" layoutY="212.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: cyan;" />
-            <Button alignment="CENTER" contentDisplay="CENTER" onAction="#Inventario" prefHeight="91.0" prefWidth="163.0" style="-fx-background-color: white;" text="Inventario">
+            <Separator layoutX="10.0" layoutY="212.0" prefHeight="21.0" prefWidth="170.0" style="-fx-background-color: #4169E1;" />
+            <Button alignment="CENTER" contentDisplay="CENTER" onAction="#Inventario" prefHeight="91.0" prefWidth="163.0" style="-fx-background-color: white; -fx-cursor: hand;" text="Inventario">
                <opaqueInsets>
                   <Insets bottom="2.0" />
                </opaqueInsets>

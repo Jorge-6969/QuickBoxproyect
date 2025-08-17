@@ -8,27 +8,33 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="590.0" prefWidth="944.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cargarPanel.vistas.VistazoController">
+<AnchorPane id="AnchorPane" prefHeight="694.0" prefWidth="1081.0" style="-fx-background-color: #C2B9F3;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cargarPanel.vistas.VistazoController">
+
     <children>
-      <TableView fx:id="tableview" layoutX="254.0" layoutY="159.0" prefHeight="302.0" prefWidth="657.0">
+      <TableView fx:id="tableview" editable="true" layoutX="254.0" layoutY="159.0" prefHeight="482.0" prefWidth="728.0">
         <columns>
          
           <TableColumn fx:id="codigo" prefWidth="85.0" text="ID" />
-          <TableColumn fx:id="nombre" prefWidth="157.0" text="Marca" />
-            <TableColumn fx:id="precio" prefWidth="155.0" text="Precio" />
-            <TableColumn fx:id="descripcion" prefWidth="114.0" text="Descripcion" />
-            <TableColumn fx:id="foto" prefWidth="141.0" text="Foto" />
+          <TableColumn fx:id="nombre" prefWidth="157.0" text="Nombre" />
+            <TableColumn fx:id="existencia" prefWidth="155.0" text="Existencia" />
+            <TableColumn fx:id="precio" prefWidth="114.0" text="Precio" />
+            <TableColumn fx:id="descripcion" prefWidth="141.0" text="Descripcion" />
+            <TableColumn fx:id="fotoCol" prefWidth="75.0" text="Foto" />
         </columns>
       </TableView>
-      <Button layoutX="284.0" layoutY="55.0" mnemonicParsing="false" onAction="#selectAll" text="Mostrar todo" />
-      <Button layoutX="603.0" layoutY="55.0" mnemonicParsing="false" onAction="#update" text="Actualizar" />
-      <Button layoutX="714.0" layoutY="55.0" mnemonicParsing="false" onAction="#delete" text="Eliminar" />
-      <TextField fx:id="precios" layoutX="17.0" layoutY="211.0" promptText="Precio" />
-      <TextField fx:id="descripcions" layoutX="16.0" layoutY="266.0" prefHeight="89.0" prefWidth="150.0" promptText="Descripcion" />
+      <Button layoutX="386.0" layoutY="55.0" mnemonicParsing="false" onAction="#selectAll" text="Mostrar todo" />
+      <Button layoutX="705.0" layoutY="55.0" mnemonicParsing="false" onAction="#update" text="Actualizar" />
+      <Button layoutX="816.0" layoutY="55.0" mnemonicParsing="false" onAction="#delete" text="Eliminar" />
+      <TextField fx:id="precios" layoutX="16.0" layoutY="300.0" promptText="Precio" />
+      <TextField fx:id="descripcions" layoutX="16.0" layoutY="347.0" prefHeight="89.0" prefWidth="150.0" promptText="Descripcion" />
       <TextField fx:id="nombres" layoutX="17.0" layoutY="143.0" promptText="Nombre" />
       <TextField fx:id="codigos" layoutX="17.0" layoutY="55.0" promptText="Código" />
-      <Button layoutX="461.0" layoutY="55.0" mnemonicParsing="false" onAction="#insert" text="Agregar" />
-      <DatePicker fx:id="fecha" layoutX="736.0" layoutY="487.0" />
-      <Label fx:id="usuarioSesion" layoutX="736.0" layoutY="528.0" prefHeight="26.0" prefWidth="175.0" />
+      <Button layoutX="563.0" layoutY="55.0" mnemonicParsing="false" onAction="#insert" text="Agregar" />
+      <DatePicker fx:id="fecha" layoutX="17.0" layoutY="547.0" />
+      <Label fx:id="usuarioSesion" layoutX="17.0" layoutY="584.0" prefHeight="26.0" prefWidth="175.0" />
+      <Button layoutX="239.0" layoutY="55.0" mnemonicParsing="false" onAction="#selectAll" text="Buscar" />
+      <TextField fx:id="existencias" layoutX="17.0" layoutY="220.0" onAction="#selectF" promptText="Existencias" />
+      <TextField fx:id="txtFoto" layoutX="17.0" layoutY="457.0" promptText="Foto" />
+      <Button layoutX="40.0" layoutY="513.0" mnemonicParsing="false" onAction="#elegirFoto" text="Seleccionar foto" />
     </children>
 </AnchorPane>

@@ -22,7 +22,7 @@
                         <Font name="Tahoma" size="20.0" />
                      </font>
                   </Label>
-                  <VBox layoutX="-2.0" layoutY="-2.0" prefHeight="46.0" prefWidth="598.0" style="-fx-background-color: cyan;" />
+                  <VBox layoutX="-2.0" layoutY="-2.0" prefHeight="46.0" prefWidth="598.0" style="-fx-background-color: #4169E1;" />
                   <TextField fx:id="txtUsuario" layoutX="58.0" layoutY="215.0" onAction="#loginAdmin" prefHeight="30.0" prefWidth="220.0" promptText="Usuario" styleClass="textfield" stylesheets="@loginDesign.css" />
                </children>
             </AnchorPane>
