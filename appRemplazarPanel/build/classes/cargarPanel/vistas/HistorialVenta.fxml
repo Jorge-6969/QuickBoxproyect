@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cargarPanel.vistas.HistorialVenta">
+
+    <children>
+
+        <!-- Controles superiores -->
+        <Button layoutX="20.0" layoutY="20.0" onAction="#refrescar" text="Refrescar" />
+        <TextField fx:id="tfBuscar" layoutX="110.0" layoutY="20.0" prefWidth="300.0" promptText="Buscar por código o nombre" />
+        <Button layoutX="420.0" layoutY="20.0" onAction="#buscar" text="Buscar" />
+        <Button layoutX="490.0" layoutY="20.0" onAction="#verTodo" text="Ver Todo" />
+
+        <!-- Tabla historial -->
+        <TableView fx:id="tablaHistorial" prefHeight="420.0" prefWidth="760.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="60.0" text="ID" />
+                <TableColumn fx:id="colCodigo" prefWidth="100.0" text="Código" />
+                <TableColumn fx:id="colNombre" prefWidth="220.0" text="Nombre" />
+                <TableColumn fx:id="colPrecio" prefWidth="100.0" text="Precio" />
+                <TableColumn fx:id="colCantidad" prefWidth="90.0" text="Cantidad" />
+                <TableColumn fx:id="colSubtotal" prefWidth="100.0" text="Subtotal" />
+                <TableColumn fx:id="colFecha" prefWidth="140.0" text="Fecha" />
+            </columns>
+
+        </TableView>
+      <DatePicker fx:id="fecha" layoutX="584.0" layoutY="7.0" />
+      <Label fx:id="usuarioSesion" layoutX="582.0" layoutY="37.0" prefHeight="18.0" prefWidth="175.0" />
+
+    </children>
+</AnchorPane>

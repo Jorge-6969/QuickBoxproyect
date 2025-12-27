@@ -4,23 +4,33 @@ import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class Vehiculos {
 
     private final StringProperty codigo;
     private final StringProperty nombre;
+    private final StringProperty existencia;
     private final StringProperty precio;
     private final StringProperty descripcion;
-    private ImageView imagen;
-     private final StringProperty foto;
+    private final ImageView imageView = new ImageView();
+    private final StringProperty foto;
+    
 
- public Vehiculos(String codigo, String nombre, String precio, String descripcion, String foto) {
+   
+
+     
+
+ public Vehiculos(String codigo, String nombre,String existencia, String precio, String descripcion, String foto) {
         this.codigo = new SimpleStringProperty(codigo);
         this.nombre = new SimpleStringProperty(nombre);
+        this.existencia = new SimpleStringProperty(existencia);
         this.precio = new SimpleStringProperty(precio);
         this.descripcion = new SimpleStringProperty(descripcion);
         this.foto = new SimpleStringProperty(foto);
+
+
 
       
     }
@@ -62,12 +72,20 @@ public class Vehiculos {
     public void setPrecio(String pre) {
         this.precio.set(pre);
     }
-    
+    public String getExistencia() {
+        return existencia.get();
+    }
+
+    public void setExistencia(String exs) {
+        this.existencia.set(exs);
+    }
     public String getFoto() {
         return foto.get();
     }
-
     public void setFoto(String img) {
         this.foto.set(img);
     }
+
+
+   
 }

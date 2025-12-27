@@ -41,12 +41,12 @@ public class PrincipalController implements Initializable {
 
     @FXML
     private void Usuario(ActionEvent event) {
-        loadPage("vistas/Equipo.fxml");
+        loadPage("vistas/HistorialVenta.fxml");
     }
     
     @FXML
     private void Venta(ActionEvent event) {
-        loadPage("vistas/Crud.fxml");
+        loadPage("vistas/Venta.fxml");
     }
     
     @FXML

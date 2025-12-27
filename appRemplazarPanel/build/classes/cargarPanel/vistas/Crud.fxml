@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="655.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cargarPanel.vistas.CrudController">
    <children>
-      <AnchorPane prefHeight="642.0" prefWidth="828.0" style="-fx-background-color: #C2B9F3;">
+      <AnchorPane prefHeight="642.0" prefWidth="828.0">
          <children>
             <Button layoutX="148.0" layoutY="24.0" mnemonicParsing="false" onAction="#selectOne" style="-fx-cursor: hand;" text="selectOne">
                <font>
@@ -39,28 +35,19 @@
             <TextField fx:id="id" layoutX="51.0" layoutY="24.0" onKeyReleased="#habilitarPorId" prefHeight="40.0" prefWidth="78.0" promptText="id">
                <font>
                   <Font size="18.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="usuarios" layoutX="26.0" layoutY="162.0" prefHeight="40.0" prefWidth="180.0" promptText="usuario" />
+               </font></TextField>
+            <TextField fx:id="usuario" layoutX="26.0" layoutY="162.0" prefHeight="40.0" prefWidth="180.0" promptText="usuario" />
             <TextField fx:id="nombre" layoutX="26.0" layoutY="234.0" prefHeight="40.0" prefWidth="180.0" promptText="nombre" />
             <TextField fx:id="aPaterno" layoutX="26.0" layoutY="308.0" prefHeight="40.0" prefWidth="180.0" promptText="Apellido Paterno" />
             <TextField fx:id="aMaterno" layoutX="26.0" layoutY="381.0" prefHeight="40.0" prefWidth="180.0" promptText="Apellido Materno" />
+            <PasswordField fx:id="contrasena" layoutX="26.0" layoutY="445.0" prefHeight="40.0" prefWidth="180.0" promptText="Contraseña" />
             <Button fx:id="btnUpdate" layoutX="492.0" layoutY="24.0" mnemonicParsing="false" onAction="#update" onKeyReleased="#habilitarPorId" prefHeight="39.0" prefWidth="103.0" style="-fx-cursor: hand;" text="update">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <TextArea fx:id="area" editable="false" layoutX="286.0" layoutY="105.0" prefHeight="412.0" prefWidth="389.0" />
-            <DatePicker fx:id="fecha" layoutX="610.0" layoutY="537.0" />
-            <Label fx:id="usuarioSesion" layoutX="610.0" layoutY="575.0" prefHeight="26.0" prefWidth="175.0" />
-            <TextField fx:id="txtcontrasena1" layoutX="26.0" layoutY="497.0" prefHeight="40.0" prefWidth="180.0" promptText="Confirmar Contaseña" />
-            <TextField fx:id="txtcontrasena" layoutX="26.0" layoutY="442.0" prefHeight="40.0" prefWidth="180.0" promptText="Contraseña" />
-            <VBox layoutX="-1.0" layoutY="-7.0" prefHeight="78.0" prefWidth="826.0" />
-            <ImageView fitHeight="85.0" fitWidth="94.0" layoutX="62.0" layoutY="71.0">
-               <image>
-                  <Image url="@../../../../../../../../Downloads/puedes_haverlo_en_fo-removebg-preview.png" />
-               </image>
-            </ImageView>
+            <TextArea fx:id="area" layoutX="286.0" layoutY="105.0" prefHeight="412.0" prefWidth="389.0" />
+            <PasswordField fx:id="contrasena1" layoutX="26.0" layoutY="497.0" prefHeight="40.0" prefWidth="180.0" promptText="Confirmar contraseña" />
          </children>
       </AnchorPane>
    </children>
